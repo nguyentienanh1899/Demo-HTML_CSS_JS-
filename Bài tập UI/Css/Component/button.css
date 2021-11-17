@@ -1,0 +1,71 @@
+.button{
+    height: 40px;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+    padding-right: 24px;
+    text-align: center;
+    background-color: #019160;
+    line-height: 40px;
+    border: none;
+    margin-left: 16px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #2fbebe;
+}
+
+button:active {
+    background-color: #01b075;
+}
+
+.button .button-icon {
+    margin: 12px 8px 8px 16px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../Content/icon/add.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.button .button-text {
+    white-space: nowrap;
+}
+.button.save{
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    color: #fff;
+    background-color: #019160;
+    background-image: url("../../content/icon/save.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position-x: 16px;
+    background-position-y: center;
+}
+.button.save:hover{
+    background-color: #2FBE8E;
+}
+.button.cancel{
+    height: 40px;
+    width: 50px;
+    border: 0;
+    padding: 0;
+}
+.button.cancel:hover{
+    background-color: #bbbbbb;
+}
+.button.create{
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    color: #fff;
+    background-color: #019160;
+    background-image: url("../../content/icon/add.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position-x: 16px;
+    background-position-y: center;
+}
+.button.create:hover{
+    background-color: #2FBE8E;
+}

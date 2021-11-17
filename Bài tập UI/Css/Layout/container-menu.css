@@ -1,0 +1,66 @@
+.container-menu{
+    width: 225px;
+}
+.container-menu .item{
+    height: 44px;
+    width: 100%;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.container-menu .item.item-selected{
+    background-color: #019160;
+    color: #fff;
+}
+.container-menu .item:hover{
+    background-color: #e5e5e5;
+    color: #000;
+}
+.container-menu .item:active{
+    background-color: #019160;
+    color: #fff;
+}
+.container-menu .item-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.container-menu .item .dashboard{
+    background-image: url("../../Content/icon/dashboard.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container-menu .item .report{
+    background-image: url("../../Content/icon/report.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container-menu .item .purchase{
+    background-image: url("../../Content/icon/dashboard.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container-menu .item .employee-directory{
+    background-image: url("../../Content/icon/dic-employee.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container-menu .item .employee-directory{
+    background-image: url("../../Content/icon/dic-employee.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container-menu .item .setting{
+    background-image: url("../../Content/icon/setting.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container-menu .item .item-name{
+    height: 20px;
+    width: calc(100% - 30px);
+    display: block;
+    white-space: nowrap;
+}

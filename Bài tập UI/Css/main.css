@@ -1,0 +1,28 @@
+@import url("../Css/Layout/container-header.css");
+@import url("../Css/Layout/container-menu.css");
+@import url("../Css/Layout/container-content.css");
+@import url("../Css/Component/field-input.css");
+@import url("../Css/Component/table.css");
+@import url("../Css/Component/paging.css");
+@import url("../Css/Common/common.css");
+@import url("../Css/Component/text-box.css");
+@import url("../Css/Component/dialog.css");
+@import url("../Css/Component/combobox.css");
+@import url("../Css/Component/validate.css");
+@import url("../Css/Component/toastmessage.css");
+@font-face {
+    font-family: GoogleSans-Regular;
+    src: url("../Content/font/GoogleSans-Regular.otf");
+}
+
+@font-face {
+    font-family: GoogleSans-Bold;
+    src: url("../Content/font/GoogleSans-Bold.otf");
+}
+
+body {
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
+    margin: 0;
+    position: relative;
+}

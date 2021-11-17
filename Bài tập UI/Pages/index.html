@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Css/main.css">
+</head>
+
+<body>
+    <div class="toast-message-zone">
+    </div>
+    <div class="container-header">
+        <div class="container-header-left">
+            <div class="toggle"></div>
+            
+        </div>
+        <div class="container-header-right">
+            <div class="restaurant-selector">
+                <div class="restaurant-name"><b>Nhà hàng Biển Đông</b></div>
+                <div class="arrow"></div>
+            </div>
+            <div class="user">
+                <div class="user-avatar"></div>
+                <div class="user-name">Nguyễn Tiến Anh</div>
+                <div class="user-selector-function"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-menu">
+        <div class="item item-selected">
+            <div class="item-icon dashboard"></div>
+            <div class="item-name">Tổng quan</div>
+        </div>
+        <div class="item">
+            <div class="item-icon report"></div>
+            <div class="item-name">Báo cáo</div>
+        </div>
+        <div class="item">
+            <div class="item-icon purchase "></div>
+            <div class="item-name">Mua hàng</div>
+        </div>
+        <div class="item">
+            <div class="item-icon employee-directory"></div>
+            <div class="item-name">Danh mục nhân viên</div>
+        </div>
+        <div class="item">
+            <div class="item-icon employee-directory"></div>
+            <div class="item-name">Danh mục nhân viên</div>
+        </div>
+        <div class="item">
+            <div class="item-icon setting"></div>
+            <div class="item-name">Thiết lập hệ thống</div>
+        </div>
+    </div>
+    <div class="container-content">
+        <div class="container-content-header">
+            <div class="title">Danh sách nhân viên</div>
+            <div class="container-content-header-btn">
+                <div class="button" id="btnDeleted">
+                    <div class="button-icon"></div>
+                    <div class="button-text">Xóa nhân viên</div>
+                </div>
+                <div class="button" id="btnAdd">
+                    <div class="button-icon"></div>
+                    <div class="button-text">Thêm nhân viên</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-content-filter">
+            <div class="container-content-filter-left">
+                <div class="filter-search">
+                    <input class="field-input" type="text" placeholder="Tìm theo mã, Tên hoặc Số điện thoại" />
+                </div>
+                <div class="filter-department">
+                    <div id="cbbPosition" class="m-combobox" style="width: 200px;">
+                        <input type="text" class="m-combobox-input" value="Phòng ban">
+                        <button class="m-combobox-button">
+                            <div class="arrow"></div>
+                        </button>
+                        <div class="m-combobox-select">
+                            <div class="m-combobox-item" value="1">Kinh doanh</div>
+                            <div class="m-combobox-item" value="2">Nhân sự</div>
+                            <div class="m-combobox-item m-item-selected" value="3">Phát triển</div>
+                        </div>
+                     </div>
+                </div>
+                <div class="filter-position">
+                    <div class="m-combobox" style="width: 200px;">
+                        <input type="text" class="m-combobox-input" value="Vị trí">
+                        <button class="m-combobox-button">
+                            <div class="arrow"></div>
+                        </button>
+                        <div class="m-combobox-select">
+                            <div class="m-combobox-item">Giám đốc</div>
+                            <div class="m-combobox-item">Trưởng phòng</div>
+                            <div class="m-combobox-item m-item-selected">Nhân viên</div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="container-content-filter-right">
+            </div>
+        </div>
+        <div class="container-table-employee">
+            <table id="tbListData" keyId="EmployeeId">
+                <thead>
+                    <tr>
+                        <th fieldName="checkbox">
+                            <div class='checkbox'></div>
+                        </th>
+                        <th fieldName="EmployeeCode">Mã nhân viên</th>
+                        <th fieldName="FullName">Họ và tên</th>
+                        <th fieldName="Gender" format="gender">Giới tính</th>
+                        <th fieldName="DateOfBirth" format = "ddmmyy">Ngày sinh</th>
+                        <th fieldName="PhoneNumber">Điện thoại</th>
+                        <th fieldName="Email">Email</th>
+                        <th fieldName="PositionName">Chức vụ</th>
+                        <th fieldName="DepartmentName">Phòng ban</th>
+                        <th fieldName="Salary" format="money">Mức lương cơ bản</th>
+                        <th fieldName="WorkStatus" format="status">Tình trạng công việc</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="container-pages">
+            <div class="record-captions">Hiển thị 1-10/1000 nhân viên</div>
+            <div class="page-list">
+                <div class="btn first-page"></div>
+                <div class="btn prev-page"></div>
+                <div class="btn page-number">1</div>
+                <div class="btn page-number">2</div>
+                <div class="btn page-number">3</div>
+                <div class="btn page-number">4</div>
+                <div class="btn next-page"></div>
+                <div class="btn last-page"></div>
+            </div>
+            <div class="number-record">10 nhân viên/trang</div>
+        </div>
+    </div>
+    <div id="dlgCustomerDetail" class="container-dialog">
+        <div class="container-dialog-modal"></div>
+        <div class="container-dialog-box">
+            <div class="container-dialog-header">
+                <div class="container-dialog-title">Thông tin nhân viên</div>
+                <div class="container-dialog-close"></div>
+            </div>
+            <div class="container-dialog-content">
+                <div class="avatar">
+                    <div class="image"></div>
+                    <!-- sửa thành dùng Whitespace vs wrap -->
+                    <div class="text-center">(Vui lòng chọn ảnh có định</div>
+                    <div class="text-center">dạng</div>
+                    <div class="text-center">.jqg,.jepg,.png,.gif.)</div>
+                </div>
+                <div class="private-info">
+                    <div class="A">
+                        <div>A. THÔNG TIN CHUNG:</div>
+                        <div class="line"></div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Mã nhân viên<span class="cl-red">(*)</span></label><br>
+                                <input type="text" class="textbox-default" id="txtCustomerCode">
+                                <div class="tooltiptext"></div>
+                            </div>
+                            <div class="col">
+                                <label for="">Họ và tên<span class="cl-red">(*)</span></label><br>
+                                <input type="text" class="textbox-default" id="txtFullNameCode">
+                                <div class="tooltiptext"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Ngày sinh</label><br>
+                                <input type="date" class="textbox-default" id="dtDateOfBirth">
+                            </div>
+                            <div class="col">
+                                <label for="">Giới tính</label><br>
+                                <select class="m-combobox" name="m-combobox" id="cbxGender" style="width:260px">
+                                    <option value="1">Nam</option>
+                                    <option value="0">Nữ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Số CMTND/ Căn cước<span class="cl-red">(*)</span></label><br>
+                                <input type="text" class="textbox-default" id="textCCCD">
+                                <div class="tooltiptext"></div>
+                            </div>
+                            <div class="col">
+                                <label for="">Ngày cấp</label><br>
+                                <input type="date" class="textbox-default">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Nơi cấp</label><br>
+                                <input type="text" class="textbox-default">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Email<span class="cl-red">(*)</span></label><br>
+                                <input type="text" class="textbox-default" id="txtEmailCode">
+                                <div class="tooltiptext"></div>
+                            </div>
+                            <div class="col">
+                                <label for="">Số điện thoại<span class="cl-red">(*)</span></label><br>
+                                <input type="text" class="textbox-default" id="txtPhoneNumberCode">
+                                <div class="tooltiptext"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="B">
+                        <div>B.THÔNG TIN CÔNG VIỆC</div>
+                        <div class="line"></div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Phòng ban</label><br>
+                                <div class="m-combobox" style="width:260px;" id="cbx-department">
+                                    <input type="text" class="m-combobox-input" value="Phòng ban" id="txtdepartment">
+                                    <button class="m-combobox-button">
+                                        <div class="arrow"></div>
+                                    </button>
+                                    <div class="m-combobox-select">
+                                        <!-- <div class="m-combobox-item">Kinh doanh</div>
+                                        <div class="m-combobox-item">Nhân sự</div>
+                                        <div class="m-combobox-item m-item-selected">Phát triển</div> -->
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="col">
+                                <label for="">Vị trí</label><br>
+                                <div class="m-combobox" style="width: 260px;" id="cbx-position">
+                                    <input type="text" class="m-combobox-input" value="Vị trí" id="txtposition">
+                                    <button class="m-combobox-button">
+                                        <div class="arrow"></div>
+                                    </button>
+                                    <div class="m-combobox-select">
+                                       <!--  <div class="m-combobox-item">Giám đốc</div>
+                                        <div class="m-combobox-item">Trưởng phòng</div>
+                                        <div class="m-combobox-item m-item-selected">Nhân viên</div> -->
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Mã số thuế cá nhân</label><br>
+                                <input type="text" class="textbox-default">
+                            </div>
+                            <div class="col">
+                                <label for="">Mức lương cơ bản</label><br>
+                                <input type="text" class="textbox-default" id="txtSalary">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Ngày gia nhập công ty</label><br>
+                                <input type="date" class="textbox-default">
+                            </div>
+                            <div class="col">
+                                <label for="">Tình trạng công việc</label><br>
+                                <div class="m-combobox" style="width: 260px;" id="cbxJobStatus">
+                                    <input type="text" class="m-combobox-input" value="Đang làm việc" id="txtjobstatus">
+                                    <button class="m-combobox-button">
+                                        <div class="arrow"></div>
+                                    </button>
+                                    <div class="m-combobox-select">
+                                        <div class="m-combobox-item" value="2">Đã nghỉ việc</div>
+                                        <div class="m-combobox-item" value="0">Đang thử việc</div>
+                                        <div class="m-combobox-item m-item-selected" value="1">Đang làm việc</div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-dialog-footer">
+                <button class="button save" id="btnSave">Lưu</button>
+                <button class="button create">Thêm</button>
+                <button class="button cancel" id="btnCancel">Hủy</button>
+            </div>
+        </div>
+    </div>
+    <!-- Thư viện js -->
+    <script src="../Js/jquery-3.6.0.min.js"></script>
+    <!-- Js dùng chung -->
+    <script src="../Js/Base/Combobox.js"></script>
+    <script src="../Js/Common/common.js"></script>
+    <script src="../Js/Base/Table.js"></script>
+    <script src="../Js/Base/Validate.js"></script>
+    <script src="../Js/Base/Enum.js"></script>
+    <script src="../Js/Base/Resources.js"></script>
+    <script src="../Js/Common/buildBase.js"></script>
+    <script src="../Js/Base/base.js"></script>
+    <!-- Js cho các page -->
+  <!--   <script src="../Js/customer.js"></script> -->
+    <script src="../Js/customer-page.js"></script>
+</body>
+
+</html>

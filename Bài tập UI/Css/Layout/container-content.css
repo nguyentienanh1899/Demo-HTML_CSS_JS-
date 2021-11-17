@@ -1,0 +1,76 @@
+@import url("../Component/button.css");
+.container-content{
+    position: absolute;
+    top: 48px;
+    left: 224px;
+    display: block;
+    width: calc(100% - 225px);
+    height: calc(100vh -48px);
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.container-content .container-content-header{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container-content-header .title{
+    padding-top: 20px;
+    font-size: 20px;
+    width: auto;
+    font-weight: bold;
+    margin-left: 24px;
+}
+.container-content-header .button{
+    height: 40px;
+    margin-top: 12px;
+    margin-right: 24px;
+    display: flex;
+    cursor: pointer;
+}
+.container-content-filter{
+    height: 48px;
+    width: 100%;
+    display: flex;
+    padding-top: 4px;
+    justify-content: space-between;
+}
+.container-content-filter-left{
+    display: flex;
+}
+.filter-department, .filter-position{
+    height: 40px;
+    width: 202px;
+    margin-left: 16px;
+}
+.department-select, .position-select{
+    width: calc(100% - 2px);
+}
+.container-content-filter-right{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    right: 0;
+    width: 50px;
+    height: 40px;
+    background-image: url("../../Content/icon/refresh.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.container-table-employee{
+    height: calc(100vh - 217px);
+    margin: 0px 24px 0px 24px;
+    overflow: scroll;
+    width: calc(100% - 48px);
+}
+.record-captions{
+    margin-left: 10px;
+}
+.number-record{
+    margin-right:10px;
+}

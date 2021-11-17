@@ -1,0 +1,99 @@
+.container-header{
+    height: 48px;
+    width: 100%;
+    display: flex;
+}
+.container-header .container-header-left{
+    height: 48px;
+    width: 225px;
+    align-items: center;
+    display: flex;
+}
+.container-header .container-header-left .toggle{
+    width: 24px;
+    height: 24px;
+    margin: 12px 18px 12px 16px;
+    background-image: url("../../Content/img/toggle.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.container-header .container-header-left .logo{
+    width: 100%;
+    height: 24px;
+    background-image: url("../../Content/img/cukcuk-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+.container-header .container-header-right{
+    height: 100%;
+    width: calc(100% - 218px);
+    border-left: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.container-header .container-header-right .restaurant-selector{
+    height: 44px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+.container-header-right .restaurant-selector .restaurant-name{
+    width: auto;
+    font-size: 15px;
+    margin-left: 16px;
+    margin-right: 10px;
+}
+.container-header-right .restaurant-selector .arrow{
+    height: 16px;
+    width: 16px;
+    background-image: url("../../Content/img/arrow.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+.container-header-right .user{
+    height: 100%;
+    width: auto;
+    justify-content: center;
+    display: flex;
+}
+.container-header-right .user .user-avatar{
+    width: 32px;
+    height: 32px;
+    margin: 6px 16px 8px 16px;
+    border-radius: 50%;
+    background-image: url("../../Content/icon/avatar-default.png");
+    background-size: contain;
+    background-color: #ccc;
+}
+.container-header-right .user .user-name{
+    width: auto;
+    line-height: 48px;
+    font-size: 13px;
+    text-align: center;
+}
+.container-header-right .user .user-selector-function{
+    height: 16px;
+    width: 16px;
+    margin: 16px 16px 16px 16px;
+    background-image: url("../../Content/icon/option.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container-content-header-btn{
+    display: flex;
+}
+.container-content-header-btn #btnDeleted{
+    margin-right: 0px !important;
+}
+.container-content-header-btn #btnDeleted .button-icon{
+    margin: 12px 8px 8px 16px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../Content/icon/bin.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

@@ -1,0 +1,93 @@
+
+.m-combobox{
+    position: relative;
+    display: flex;
+    color: #000;
+    height: 40px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    /* margin-top: 4px; */
+    min-width: 100px;
+    box-sizing: border-box;
+}
+
+.m-combobox input{
+    width: calc(100% - 40px);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* border:1px solid tomato; */
+    box-sizing: border-box;
+}
+.m-combobox:focus{
+    border-Color: #019160;
+}
+.m-combobox:hover{
+    border-Color: #019160;
+}
+.m-combobox .m-combobox-button{
+    flex-shrink: 0;
+    width: 40px;
+    padding: 0 12px;
+    background-color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbbbbb;
+    cursor: pointer;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.m-combobox .m-combobox-button:hover{
+ background-color: #e9e9e9;
+}
+
+.m-combobox .m-combobox-select{
+    display: none;
+    z-index: 999;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    /* border: 1px solid #ccc; */
+    box-shadow: 1px 4px 5px -1px #ccc;
+    border-radius: 4px;
+    padding: 4px 0;
+    background-color:#fff;
+}
+
+.m-combobox .m-combobox-select .m-combobox-item{
+    display: flex;
+    padding-left: 36px;
+    height: 40px;
+    align-items: center;
+    align-content: center;
+    /* border: 1px solid #000; */
+    cursor: pointer;
+    
+} 
+
+.m-combobox .m-combobox-select .m-combobox-item:not(.m-item-selected):hover{
+    background-color: #E9EBEE;
+    color: #000;
+}
+
+.m-combobox .m-item-selected{
+    background-repeat: no-repeat;
+    background-color: #019160;
+    color: #fff;
+    background-image: url('../../Content/icon/check.png');
+    background-position:10px center;
+    background-size:16px 16px;
+}
+.m-combobox-button .arrow{
+    height: 38px;
+    width: 15px;
+    background-image: url("../../Content/icon/btn-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
